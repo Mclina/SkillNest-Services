@@ -11,11 +11,11 @@ function Hero() {
             <span className='text-orange-800'> A Service/Repair</span> 
             <br></br>Provider Near You</h2>
         <h2 className='text-xl text-slate-600'>Explore Best Services & Repair Near You</h2>
-        <div className='mt-4 '>
+        <div className='mt-4 flex gap-2 items-center'>
             <Input placeholder='Search'
             className="rounded-full md:w-[350px]" />
-            <Button>
-                <Search/>
+            <Button className="rounded-full h-[36px]">
+              <Search className='h-5 w-5'/>
             </Button>
         </div>
     </div>
