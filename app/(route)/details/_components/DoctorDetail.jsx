@@ -8,12 +8,12 @@ function BusinessDetail({business}) {
     const socialMediaList=[
         {
             id:1,
-            icon:'/youtube.png',
+            icon:'/whatsapp.png',
             url:''
         },
         {
             id:2,
-            icon:'/linkedin.png',
+            icon:'/instagram.png',
             url:''
         },
         {
