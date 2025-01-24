@@ -1,8 +1,8 @@
 "use client"
 import GlobalApi from '@/app/_utils/GlobalApi'
 import React, { useEffect, useState } from 'react'
-import BusinessDetail from '../_components/BusinessDetail';
-import BusinessSuggestionList from '../_components/BusinessSuggestionList';
+import BusinessDetail from '../_components/DoctorDetail';
+import BusinessSuggestionList from '../_components/DoctorSuggestionList';
 
 function Details({params}) {
 
