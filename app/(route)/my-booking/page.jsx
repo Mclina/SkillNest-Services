@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import BookingList from './_components/BookingList'
@@ -26,8 +27,8 @@ function MyBooking() {
 
 	const filterUserBooking=(type)=>{
 		const result=bookingList.filter(item=>
-			type=='upcoming'? new Date(item.attributes.Date)>=new Date()
-			:new Date(item.attributes.Date)<=new Date()
+			type=='upcoming'? new Date(item.documentId.Date)>=new Date()
+			:new Date(item.documentId.Date)<=new Date()
 		)
 		console.log(result)
 		return result;

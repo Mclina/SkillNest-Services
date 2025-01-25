@@ -17,18 +17,18 @@ function BusinessList({businessList,heading='Popular Business'}) {
             cursor-pointer hover:border-primary
             hover:shadow-sm transition-all ease-in-out'
             key={index}>
-                <Image src={business.attributes?.image?.data?.attributes?.url}
+                <Image src={business.documentId?.image?.documentId?.url}
                 alt='business'
-                width={500}
-                height={200}
+                width={200}
+                height={120}
                 className='h-[200px] w-full object-cover rounded-lg'
                 />
                 <div className='mt-3 items-baseline flex flex-col gap-1'>
                     <h2 className='text-[10px] bg-orange-100 p-1 rounded-full
-                    px-2 text-primary'>{business.attributes?.categories.data[0].attributes?.Name}</h2>
-                    <h2 className='font-bold'>{business.attributes.Name}</h2>
-                    <h2 className='text-primary text-sm'>{business.attributes?.Year_of_Experience}</h2>
-                    <h2 className='text-gray-500 text-sm'>{business.attributes?.Address}</h2>
+                    px-2 text-primary'>{business.documentId?.categories.data[0].documentId?.Name}</h2>
+                    <h2 className='font-bold'>{business.documentId.Name}</h2>
+                    <h2 className='text-primary text-sm'>{business.documentId?.Year_of_Experience}</h2>
+                    <h2 className='text-gray-500 text-sm'>{business.documentId?.Address}</h2>
                     <Link href={'/details/'+business?.id} className='w-full'>
                     <h2 className='p-2 px-3 border-[1px] border-primary
                     text-primary rounded-full w-full text-center

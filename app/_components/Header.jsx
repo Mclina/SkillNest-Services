@@ -38,9 +38,9 @@ function Header() {
     <div className='flex items-center justify-between p-4 shadow-sm'>
       <div className='flex items-center gap-10'>
       <Image src='/logo.svg' alt='logo'
-      width={140} height={60}
+      width={160} height={60}
       />
-      <ul className='md:flex gap-8 hidden'>
+      <ul className='md:flex gap-4 hidden'>
         {Menu.map((item,index)=>(
           <Link href={item}>
           <li className='hover:text-orange-900 

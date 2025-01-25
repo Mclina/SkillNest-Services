@@ -1,24 +1,40 @@
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Search } from 'lucide-react'
+import Image from 'next/image'
 import React from 'react'
 
 function Hero() {
   return (
-    <div className='flex items-center flex-col justify-center pt-14 pb-7'>
-        <h2 className='font-bold text-[46px] text-center'>
-            Find & Book Appointment With
-            <span className='text-orange-800'> A Service/Repair</span> 
-            <br></br>Provider Near You</h2>
-        <h2 className='text-xl text-slate-600'>Explore Best Services & Repair Near You</h2>
-        <div className='mt-4 flex gap-2 items-center'>
-            <Input placeholder='Search'
-            className="rounded-full md:w-[350px]" />
-            <Button className="rounded-full h-[36px]">
-              <Search className='h-5 w-5'/>
-            </Button>
-        </div>
+    <section>
+  <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+      <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+        <Image
+          alt=""
+          src="/logo.svg"
+          width={800}
+          height={800}
+          className="absolute inset-0 h-full
+          rounded-3xl 
+          w-full object-cover"
+        />
+      </div>
+
+      <div className="lg:py-24">
+        <h2 className="text-4xl font-bold sm:text-4xl">
+            Find & Book 
+            <span className='text-primary'> Appointment </span> 
+            with 
+            <span className='text-primary '> A Service/Repair</span></h2>
+
+        <p className="mt-4 text-gray-500">
+        A platform connecting users with local service providers like plumbers, electricians, and cleaners.
+        </p>
+
+        <Button className="mt-10">Explore Now</Button>
+      </div>
     </div>
+  </div>
+</section>
   )
 }
 

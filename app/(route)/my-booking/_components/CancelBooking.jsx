@@ -12,19 +12,19 @@ import {
   } from "@/components/ui/alert-dialog"
 import { Button } from '@/components/ui/button'
   
-function CancelAppointment({onContinueClick}) {
+function CancelBooking({onContinueClick}) {
 
     
   return (
     <AlertDialog>
     <AlertDialogTrigger>
-    <Button variant="outline" className="text-primary border-primary">Cancel Appointment</Button>
+    <Button variant="outline" className="text-primary border-primary">Cancel Booking</Button>
     </AlertDialogTrigger>
     <AlertDialogContent>
       <AlertDialogHeader>
         <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
         <AlertDialogDescription>
-          This action cannot be undone. This will permanently delete your appointment
+          This action cannot be undone. This will permanently delete your booking
           and remove your data from our servers.
         </AlertDialogDescription>
       </AlertDialogHeader>
@@ -38,4 +38,4 @@ function CancelAppointment({onContinueClick}) {
   )
 }
 
-export default CancelAppointment
+export default CancelBooking

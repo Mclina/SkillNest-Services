@@ -43,15 +43,15 @@ function CategorySearch() {
             gap-2 hover:scale-110 transition-all ease-in-out'>
               <Image src={item.attributes?.Icon?.data.attributes?.url}
               alt='icon'
-              width={40}
-              height={40}/>
+              width={20}
+              height={20}/>
               <label className='text-orange-600 text-sm'>{item?.attributes?.Name}</label>
             </Link>
           ))
         :
         [1,2,3,4,5,6].map((item,index)=>(
           <div className=' bg-slate-200 m-2
-         w-[130px] h-[120px] rounded-lg animate-pulse'>
+         w-[100px] h-[80px] rounded-lg animate-pulse'>
              
           </div>
       ))

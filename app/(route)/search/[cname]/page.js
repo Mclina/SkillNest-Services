@@ -1,7 +1,7 @@
 "use client"
 import BusinessList from '@/app/_components/BusinessList';
 import GlobalApi from '@/app/_utils/GlobalApi';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Search({params}) {
     const [businessList,setBusinessList]=useState([]);

@@ -1,3 +1,4 @@
+"use client"
 import GlobalApi from '@/app/_utils/GlobalApi';
 import React, { useEffect, useState } from 'react'
 import {
@@ -39,19 +40,19 @@ function CategoryList() {
     <CommandGroup heading="Suggestions" >
         {categoryList&&categoryList.map((item,index)=>(
             <CommandItem key={index}>
-                <Link href={'/search/'+item?.attributes?.Name}
+                <Link href={'/search/'+item?.documentId?.Name}
                 className={`p-2 flex gap-2
                 text-[14px]
                 text-orange-600
                 items-center
                 rounded-md cursor-pointer w-full
-                ${category==item.attributes.Name&&'bg-orange-100'}
+                ${category==item.documentId.Name&&'bg-orange-100'}
                 `}>
-                    <Image src={item.attributes?.Icon?.data.attributes?.url}
+                    <Image src={item.documentId?.Icon?.data.documentId?.url}
                     alt='icon'
                     width={25}
                     height={25}/>
-                    <label>{item.attributes.Name}</label>
+                    <label>{item.documentId.Name}</label>
                 </Link>
             </CommandItem>
         ))}

@@ -17,7 +17,7 @@ import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
 import GlobalApi from '@/app/_utils/GlobalApi'
 import { toast } from 'sonner'
 
-function BookAppointment({doctor}) {
+function BookingSection({business}) {
     const [date, setDate]=useState(new Date());
     const [timeSlot,setTimeSlot]=useState();
     const [selectedTimeSlot,setSelectedTimeSlot]=useState();
@@ -56,12 +56,12 @@ function BookAppointment({doctor}) {
           Email:user.email,
           Time:selectedTimeSlot,
           Date:date,
-          doctor:doctor.id,
+          Business:business.id,
           Note:note
         }
       }
       // console.log(data)
-      GlobalApi.bookAppointment(data).then(resp=>{
+      GlobalApi.bookingSection(data).then(resp=>{
         console.log(resp);
         if(resp)
         {
@@ -79,12 +79,12 @@ function BookAppointment({doctor}) {
   return (
 <Dialog>
   <DialogTrigger>
-  <Button className="mt-3 rounded-full">Book Appointment</Button>
+  <Button className="mt-3 rounded-full">Book A Service</Button>
 
   </DialogTrigger>
   <DialogContent>
     <DialogHeader>
-      <DialogTitle>Book Appointment</DialogTitle>
+      <DialogTitle>Book A Service</DialogTitle>
       <DialogDescription>
             <div>
                 <div className='grid grid-cols-1 md:grid-cols-2 mt-5'>
@@ -106,7 +106,7 @@ function BookAppointment({doctor}) {
                     <div className=' mt-3 md:mt-0'>
                         <h2 className='flex gap-2 items-center mb-3'>
                           <Clock className='text-primary h-5 w-5'/>
-                          Select Time Slot
+                          Select Date and Time Slot to book a service
                         </h2>
                         <div className='grid grid-cols-3 gap-2 border
                         rounded-lg p-5'>
@@ -147,4 +147,4 @@ function BookAppointment({doctor}) {
   )
 }
 
-export default BookAppointment
+export default BookingSection
