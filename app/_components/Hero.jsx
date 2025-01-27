@@ -11,8 +11,8 @@ function Hero() {
         <Image
           alt=""
           src="/logo.svg"
-          width={800}
-          height={800}
+          width={50}
+          height={10}
           className="absolute inset-0 h-full
           rounded-3xl 
           w-full object-cover"
@@ -23,8 +23,8 @@ function Hero() {
         <h2 className="text-4xl font-bold sm:text-4xl">
             Find & Book 
             <span className='text-primary'> Appointment </span> 
-            with 
-            <span className='text-primary '> A Service/Repair</span></h2>
+            With A
+            <span className='text-primary '>Services Provider Near You</span></h2>
 
         <p className="mt-4 text-gray-500">
         A platform connecting users with local service providers like plumbers, electricians, and cleaners.

@@ -6,6 +6,7 @@ import CategorySearch from "./_components/CategorySearch";
 import BusinessList from "./_components/BusinessList";
 import { useEffect, useState } from "react";
 import GlobalApi from "./_utils/GlobalApi";
+import axios from 'axios';
 
 export default function Home() {
 
