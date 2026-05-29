@@ -165,6 +165,8 @@ This project is licensed under the MIT License.
 ## 👨‍💻 Author
 
 **Mariacelin Oshiomah**
+ **Desmond Alanyuy **
+ **samuel nweke**
 
 - DevOps & Cloud Engineer
 - AWS | Docker | Kubernetes | Terraform | CI/CD | Linux
